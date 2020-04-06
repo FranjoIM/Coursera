@@ -26,7 +26,5 @@ names(TD)<-gsub("angle", "Angle", names(TD))
 names(TD)<-gsub("gravity", "Gravity", names(TD))
 
 # From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-FD <- TD %>%
-  group_by(subject, Activity) %>%
-  summarise_all(list(mean=mean))
+FD <- TD %>% group_by(subject, Activity) %>% summarise_all(list(mean=mean))
 write.table(FD, "FinalData.txt", row.name=FALSE)
