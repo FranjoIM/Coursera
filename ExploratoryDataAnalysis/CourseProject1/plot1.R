@@ -1,9 +1,6 @@
 # Set the working directory
 setwd("~/Desktop/MathewsLab.nosync/Practice/Coursera/Exploratory Data Analysis/Coure Project 1")
 
-# Set the working directory
-setwd("~/Desktop/MathewsLab.nosync/Practice/Coursera/Exploratory Data Analysis/Coure Project 1")
-
 # Load the necessary packages
 library(dplyr)
 
