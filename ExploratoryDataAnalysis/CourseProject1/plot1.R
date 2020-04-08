@@ -12,10 +12,9 @@ head(HPC, 2)
 HPC <- HPC[complete.cases(HPC),]
 
 # Convert Date column into date/time type variable and only select data points form
-# February 1st and 2nd of 2007
+# February 1st and 2nd of 2007, create a DateTime column
 HPC$Date <- as.Date(HPC$Date,"%d/%m/%Y")
 HPC <- HPC %>% filter(Date == "2007-02-01" | Date == "2007-02-02")
-
 
 dateTime <- paste(HPC$Date, HPC$Time)
 dateTime <- setNames(dateTime, "DateTime")
@@ -29,4 +28,3 @@ png("plot1.png",width=480,height=480,units="px")
 with(HPC, hist(Global_active_power, col="red", main = "Global Active Power", 
                xlab="Global Active Power (kilowatts)"))
 dev.off()
-
